@@ -4,13 +4,6 @@ class AuthController < ApplicationController
 	
 	def index
 		session[:github_auth_state] = ""
-
-		# session.delete(:current_user_id)
-
-		# current_user = !!session[:current_user_id] ? User.find(session[:current_user_id]) : nil
-		current_user = session[:current_user_id].nil? ? nil : User.find(session[:current_user_id])
-		
-		# render plain: current_user.blank?
 	end
 	
 	def login
